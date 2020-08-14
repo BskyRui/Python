@@ -12,7 +12,7 @@ class Student():
         self.name = name
         self.age = age
         # 私有变量和方法加__, _Student__score
-        self.__score = 60;
+        self.__score = 60
         # 调用父类构造函数
         # super(Student, self).__init__(name, age)
     
@@ -41,7 +41,7 @@ print(student.name, Student.sum)
 # 调用类方法, 不要用实例变量去调用类方法
 Student.plus_sum()
 
-# print(student.__score);
+# print(student.__score)
 
 
 
