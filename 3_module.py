@@ -15,7 +15,7 @@ print(t_import.a)
 from common.t_import import a 
 print(a)
 
-# 可以使用 import *, 在模块中定义 * 的行为 __all__ = ['a', 'c']
+# 可以使用 import *, 在模块中定义 * 的行为 __all__ = ['b', 'c']
 from common.t_import import *
 # from common.t_import import a, b
 print(b, c)
@@ -26,7 +26,7 @@ print(b, c)
 # __init__.py 的用法
 # __init__在被导入的时候会自动运行, 批量导入的时候时候需要在__init__.py文件中定义__all__(模块名)
 from common import *
-print(p1.name, p2.age)
+print(p1.name, p2.age, '#################')
 # 如果多个文件需要导入相同的内容, 可以在__init_.py中 import sys, import datetime...
 
 ### 1) 包和模块不会被重复的导入
