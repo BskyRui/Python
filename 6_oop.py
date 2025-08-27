@@ -1,6 +1,6 @@
 # 如何设计类: 行为 和 特征
 
-class Student():
+class Student(object):
     # 类变量
     sum = 0
     name = ''
@@ -10,17 +10,19 @@ class Student():
     def __init__(self, name, age):
         # 实例变量
         self.name = name
-        self.age = age
+        # self.age = age
         # 私有变量和方法加__, _Student__score
         self.__score = 60
         # 调用父类构造函数
         # super(Student, self).__init__(name, age)
 
         self.__private()
+        # 类属性
+        Student.age += 1
 
     def __private(self):
         print('hello, __private')
-    
+
     def print_info(self):
         print(self.name, self.age)
 
@@ -50,5 +52,6 @@ Student.plus_sum()
 
 # print(student.__score)
 
+student1 = Student('lr', 19)
 
-
+print(f'student.age = {student.age}')
