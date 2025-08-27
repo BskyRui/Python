@@ -101,6 +101,10 @@ print(type(arr[-1:]))
 print(arr[-1:])
 # 两个列表可以用 + 来生成新的列表, str / list / tuple 被称之为序列
 
+# 拆包
+arr1, arr2 = ["L", "R"]
+print(f'unpack=> arr1={arr1} arr2={arr2}')
+
 print('############# tuple ###############')
 # tuple和list对比, 元组不能被修改, 当只有一个元素的时候需要加上逗号(1, )
 
