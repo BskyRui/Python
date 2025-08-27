@@ -15,6 +15,11 @@ class Student():
         self.__score = 60
         # 调用父类构造函数
         # super(Student, self).__init__(name, age)
+
+        self.__private()
+
+    def __private(self):
+        print('hello, __private')
     
     def print_info(self):
         print(self.name, self.age)
@@ -37,6 +42,8 @@ student.print_info()
 # 类变量和实例变量的区别
 print(student.name, Student.sum)
 # 类变量的意义: 比如在类变量中定义一个 sum = 0, 先查找是否有实例变量, 如果不存在则会去类变量列表查找
+
+# student.__private()
 
 # 调用类方法, 不要用实例变量去调用类方法
 Student.plus_sum()
