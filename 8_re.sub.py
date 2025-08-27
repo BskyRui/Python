@@ -8,7 +8,7 @@ lan = 'PythonC#JavaPHPC#'
 def convert(value):
     # value是个对象, span为匹配到字符串在源字符串的位置
     matched = value.group()
-    return '!!' + matched + '!!'
+    return '(' + matched + ')'
 
 r = re.sub('C#', convert, lan)
 
@@ -25,5 +25,7 @@ def convert_num(value):
     matched = value.group()
     return '9' if int(matched) >= 6 else '0'
 
-r = re.sub('\d', convert_num, s)
+r = re.sub(r'\d', convert_num, s)
+
+# r = re.sub(r'\d', '-', s)
 print(r)
