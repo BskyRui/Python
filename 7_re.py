@@ -2,7 +2,7 @@ import re
 
 string = 'PHP0Python9C++0C8JavaScript'
 
-r = re.findall('\d', string)
+r = re.findall(r'\d', string)
 
 print(r)
 
@@ -37,7 +37,7 @@ print(r)
 
 string = 'python111java123&php333\t\n'
 
-r = re.findall('\w', string)
+r = re.findall(r'\w', string)
 print(r)
 
 
@@ -55,10 +55,9 @@ print(r)
 # ? 0或者1次
 string = 'pytho0python1pythonn2'
 
-r = re.findall('python?', string)
-print(r)
+r = re.findall('python?', string)  # ['pytho', 'python', 'python']
 
-# ?在这里代表非贪婪模式
+# ?在这里代表非贪婪模式,只匹配一个 n
 r = re.findall('python{1,2}?', string)
 print(r)
 
@@ -71,10 +70,10 @@ print(r)
 
 
 ##### 组 #####
-string = 'PythonPythonPython'
-# 小括号是且的关系
+string = 'PythonPythonPython1'
+# 小括号是且的关系，3个 Python
 r = re.findall('(Python){3}', string)
-print(r)
+print('group', r)
 
 
 ##### 匹配模式 ######
