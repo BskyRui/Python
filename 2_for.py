@@ -6,7 +6,7 @@ for k in a:
 
 # 带索引遍历
 for k, v in enumerate(a):
-    print(k, v)
+    print(f'key:{k}, value:{v}')
 
 # 遍历字典
 d = {'name': 'lirui', 'age': 22}
@@ -39,6 +39,4 @@ for x in range(0, 10, 2):
 # 负数
 for x in range(10, 0, -1):
     print(x, end=' | ')
-         
-
 
