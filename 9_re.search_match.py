@@ -2,14 +2,21 @@
 
 import re
 
-s = '83C72D1D8E67';
-# 尝试从字符串的 首字母 匹配
-r = re.match('\d', s)
-print(r.span())
+#s = '83C72D1D8E67';
+s = 'hello'
+# 尝试从字符串的 [首字母] 匹配，仅匹配字符串的开头
+r = re.match(r'\d', s)
+
+if (r):
+    print('span', r.span())
+else:
+    print('None')
+
 
 # 搜索整个字符串, 返回第一个匹配成功的
-r1 = re.search('\d', s)
+r1 = re.search(r'\d', s)
 print(r1)
 
 # match和search返回的是一个对象, 而findall返回的是list, match和search都只会匹配一次
 print(r1.group())
+
