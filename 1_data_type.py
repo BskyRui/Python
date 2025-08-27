@@ -13,6 +13,13 @@ print(type(2 // 2))
 # 整除, 0
 print(1 // 2, 1 / 2)
 
+
+print("swap a, b")
+a = 2
+b = 3
+a, b = b, a
+print(a, b)
+
 ############### 进制 ###################
 
 # 进制
@@ -20,7 +27,7 @@ print(1 // 2, 1 / 2)
 print(0b11)
 # 八进制 9
 print(0o11)
-# 十六进制 31
+# 十六进制 16 + 15 = 31
 print(0x1f)
 
 # 其他进制转换为 二进制
@@ -59,6 +66,7 @@ print(bool(''))
 print(bool(0))
 print(bool(None))
 
+print("string---------------------------")
 # 字符串
 tip = '''
     hello,
@@ -68,11 +76,13 @@ print('hello, \\n world.')
 # 原始字符串
 print(r'hello, \n world.')
 # 字符串截取
-print('hello,world.'[-1])
+print('hello,world.'[-1:], 'hello,world.'[-1])
+
 # 截取hello
 print('hello,world.'[0:5])
 print('hello,world'[:5])
 print('hello,world.'[:-7])
+# hello,world
 print('hello,world.'[0:-1])
 # 从指定到位置截取到末尾
 print('hello,world.'[6:])
